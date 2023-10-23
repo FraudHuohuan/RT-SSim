@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1244</width>
+    <height>793</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Scheduler</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(238, 238, 238);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="18,3,9">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="3,2">
+      <item>
+       <widget class="QGroupBox" name="groupBox_controller">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox{
+	color: rgb(7, 7, 7);
+	background-color: rgb(238, 238, 238);
+	font: 12pt &quot;Consolas&quot;;
+	border: 1px solid rgb(200, 200, 200);
+	margin-top: 0.5em;
+}
+QGroupBox::title{
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+
+}</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2,1,2,2,1,2,0,1">
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_reset">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Consolas&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(221, 221, 221);
+border:1px solid;
+border-color: rgb(71, 71, 71);
+border-radius:5px</string>
+             </property>
+             <property name="text">
+              <string>Init</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_start">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Consolas&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(221, 221, 221);
+border:1px solid;
+border-color: rgb(71, 71, 71);
+border-radius:5px</string>
+             </property>
+             <property name="text">
+              <string>Start</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_stop">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Consolas&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(221, 221, 221);
+border:1px solid;
+border-color: rgb(71, 71, 71);
+border-radius:5px</string>
+             </property>
+             <property name="text">
+              <string>Stop</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_next">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Consolas&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(221, 221, 221);
+border:1px solid;
+border-color: rgb(71, 71, 71);
+border-radius:5px</string>
+             </property>
+             <property name="text">
+              <string>Next</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_speed">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox{
+	color: rgb(7, 7, 7);
+	background-color: rgb(238, 238, 238);
+	font: 12pt &quot;Consolas&quot;;
+	border: 1px solid rgb(200, 200, 200);
+	margin-top: 0.5em;
+}
+QGroupBox::title{
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+
+}</string>
+        </property>
+        <property name="title">
+         <string>display speed</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QSlider" name="Slider_speed">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(7, 7, 7);
+background-color: rgb(238, 238, 238);
+font: 12pt &quot;Consolas&quot;;
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QTableView" name="table_joined">
+           <property name="font">
+            <font>
+             <family>Consolas</family>
+             <pointsize>12</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(7, 7, 7);
+background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="table_utilizaiton">
+           <property name="font">
+            <font>
+             <family>Consolas</family>
+             <pointsize>12</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(7, 7, 7);
+background-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1244</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Consolas</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;Consolas&quot;;</string>
+   </property>
+   <widget class="QMenu" name="menuMODE">
+    <property name="title">
+     <string>仿真模式</string>
+    </property>
+    <addaction name="heter_multicore"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>处理器配置</string>
+    </property>
+    <addaction name="action1cpu_1dsp"/>
+    <addaction name="action1cpu_8dsp"/>
+    <addaction name="separator"/>
+    <addaction name="addCore"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>任务集配置</string>
+    </property>
+    <addaction name="heter_taskset"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="addTask"/>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menuMODE"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="heter_taskset">
+   <property name="text">
+    <string>任务集合1</string>
+   </property>
+  </action>
+  <action name="action1cpu_1dsp">
+   <property name="text">
+    <string>2cpu+4dsp</string>
+   </property>
+  </action>
+  <action name="action_mode_herter">
+   <property name="text">
+    <string>异构多核</string>
+   </property>
+  </action>
+  <action name="heter_multicore">
+   <property name="text">
+    <string>异构多核</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>任务集合2</string>
+   </property>
+  </action>
+  <action name="action1cpu_8dsp">
+   <property name="text">
+    <string>1cpu+8dsp</string>
+   </property>
+  </action>
+  <action name="addTask">
+   <property name="text">
+    <string>自定义任务集</string>
+   </property>
+  </action>
+  <action name="addCore">
+   <property name="text">
+    <string>自定义处理器</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>自定义序列任务</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

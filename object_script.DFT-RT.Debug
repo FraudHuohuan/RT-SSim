@@ -1,0 +1,17 @@
+debug/addcore.o
+debug/adddag.o
+debug/addtask.o
+debug/addtask2.o
+debug/addtriplet.o
+debug/main.o
+debug/mainwindow.o
+debug/core.o
+debug/simul.o
+debug/table.o
+debug/task.o
+debug/moc_addcore.o
+debug/moc_adddag.o
+debug/moc_addtask.o
+debug/moc_addtask2.o
+debug/moc_addtriplet.o
+debug/moc_mainwindow.o

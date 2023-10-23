@@ -1,0 +1,17 @@
+release/addcore.o
+release/adddag.o
+release/addtask.o
+release/addtask2.o
+release/addtriplet.o
+release/main.o
+release/mainwindow.o
+release/core.o
+release/simul.o
+release/table.o
+release/task.o
+release/moc_addcore.o
+release/moc_adddag.o
+release/moc_addtask.o
+release/moc_addtask2.o
+release/moc_addtriplet.o
+release/moc_mainwindow.o
